@@ -1,64 +1,100 @@
-# Welcome to your Expo app 👋
+# MyShoppy 🛍️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+MyShoppy is a modern, high-performance e-commerce mobile application built using **React Native**, **Expo**, and **TypeScript**. It offers a premium shopping user experience with full shopping cart logic, search, category browsing, and details views, adapting dynamically to the user's system theme (Light/Dark mode).
 
-## Get started
+---
 
-1. Install dependencies
+## ✨ Features
 
-   ```bash
+- 🏠 **Home Page**: Interactive home screen displaying featured products, categories, search shortcuts, and special offers.
+- 🔍 **Smart Search & Filters**: Search products by name, tags, or browse specific categories with responsive filters.
+- 📂 **Category Exploration**: Dedicated category pages featuring custom descriptions and count stats.
+- 🏷️ **Product Details**: Full product description, image gallery, rating stars, price comparisons (original vs. current), stock information, and tags.
+- 🛒 **Cart Management**: Complete React Context-powered cart system allowing users to add/remove products, adjust quantities, and view real-time totals.
+- 💳 **Simulated Checkout**: A streamlined checkout process requiring simulated shipping/payment details, culminating in an elegant **Order Confirmation** screen.
+- 🌓 **Dynamic Theme (Light/Dark)**: Adaptive colors, text styles, and icons matching system preferences seamlessly.
+- ⚙️ **Modern Tech Stack**: File-based routing via `expo-router`, React Native Reanimated for smooth animations, and static TypeScript typing.
 
-   ```
+---
 
-```bash
-npm install --registry https://registry.npmjs.org
+## 📁 Project Structure
+
+```text
+myshoppy/
+├── assets/             # App icons, tab icons, and local images
+├── src/
+│   ├── app/            # Expo Router file-based screens
+│   │   ├── (tabs)/     # Primary tab screens (Home, Categories, Cart)
+│   │   ├── category/   # Dynamic category slug page
+│   │   ├── product/    # Dynamic product details page
+│   │   ├── checkout    # Checkout billing and payment flow
+│   │   └── ...         # Search, order confirmation, layouts
+│   ├── components/     # Reusable UI elements (Product Cards, Star Ratings, Tabs)
+│   ├── constants/      # App theme colors and typography sizes
+│   ├── data/           # Mock databases (Products and Categories)
+│   ├── hooks/          # Custom Hooks (UseTheme, UseColorScheme)
+│   ├── store/          # Context stores (Cart Context)
+│   └── types/          # TypeScript interface definitions
+├── package.json        # Dependencies and execution scripts
+└── tsconfig.json       # TypeScript compiler settings
 ```
 
-npx expo install expo-dev-client
+---
 
-````
+## 🚀 Getting Started
 
-2. Start the app
+Follow these steps to download, install, and run the project locally.
 
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed (LTS version recommended).
+
+### 1. Clone or Download the Project
 ```bash
-npx expo run:android
-````
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+git clone https://github.com/Uday-4083/myshoppy.git
+cd myshoppy
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install Dependencies
+Install all the required NPM packages:
+```bash
+npm install
+```
 
-### Other setup steps
+### 3. Start the Development Server
+Run the Metro Bundler:
+```bash
+npm run start
+# or
+npx expo start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+---
 
-## Learn more
+## 📱 Running the App
 
-To learn more about developing your project with Expo, look at the following resources:
+Once the development server is running, you can launch the app on different platforms:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* **Android Emulator / Device**:
+  Press **`a`** in the terminal, or run:
+  ```bash
+  npm run android
+  ```
+* **iOS Simulator / Device**:
+  Press **`i`** in the terminal, or run:
+  ```bash
+  npm run ios
+  ```
+* **Web Browser**:
+  Press **`w`** in the terminal, or run:
+  ```bash
+  npm run web
+  ```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🛠️ Built With
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **[Expo (v54)](https://expo.dev/)** - Next-generation development tooling for React Native.
+- **[Expo Router](https://docs.expo.dev/router/introduction/)** - Native, file-based router.
+- **[React Native Web](https://necolas.github.io/react-native-web/)** - Running the application directly inside modern web browsers.
+- **[React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)** - Native-thread execution for micro-interactions and transitions.
